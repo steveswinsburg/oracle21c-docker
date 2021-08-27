@@ -10,7 +10,7 @@ Note that Oracle is shifting away from an SID and using service names instead. P
 
 I used to maintain a standalone repository for building these docker images, like my Oracle 12cR2 one here: https://github.com/steveswinsburg/oracle12c-docker
 
-Through Oracle community contributions (some mine), the Official docker images are now in good shape, so all we need are simplified instructions.
+Through Oracle community contributions (some mine), the Official docker images are now in good shape, so all we need are simplified instructions 🥳
 
 Before you begin
 ----------------
