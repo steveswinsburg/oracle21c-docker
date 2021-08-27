@@ -26,7 +26,7 @@ cd OracleDatabase/SingleInstance/dockerfiles
 ./buildContainerImage.sh -v 21.3.0 -e
 ````
 
-If the build fails saying you are out of space, check how much space you have available on your disk. If it looks ok, prune old Docker images via: 
+If the build fails saying you are out of space, check how much space you have available on your disk AND available to Docker. If it looks ok, prune old Docker images via: 
 `yes | docker image prune > /dev/null`
 
 Running
