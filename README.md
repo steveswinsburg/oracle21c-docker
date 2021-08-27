@@ -7,7 +7,7 @@ Note that Oracle is shifting away from an SID and using service names instead. P
 
 I used to maintain a standalone repository for building these docker images, like my Oracle 12c one here: https://github.com/steveswinsburg/oracle12c-docker
 
-Oracle have since improved their docker images so all we need now are simplified instructions.
+Oracle have since improved their docker images so all we need now are simplified instructions based on the official Oracle docker-images repo.
 
 Before you begin
 ----------------
@@ -15,8 +15,7 @@ Before you begin
 1. Clone `https://github.com/oracle/docker-images`.
 1. Download the Oracle Database 21c binary `LINUX.X64_213000_db_home.zip` from https://www.oracle.com/database/technologies/oracle21c-linux-downloads.html
 1. Put the zip in the `OracleDatabase/SingleInstance/dockerfiles/21.3.0` directory. **Do not unzip it.**
-1. If https://github.com/oracle/docker-images/pull/1576 is not yet merged, edit `OracleDatabase/SingleInstance/dockerfiles/19.3.0/dbca.rsp.tmpl`, and change `totalMemory=2048` to `totalMemory=4000` or whatever value you want.
-1. In Docker Desktop, update the allocated memory to a value more than the value above.
+1. In Docker Desktop, ensure you have a large enough amount of memory allocated. These instructions will set the total memory to 4000MB, so make sure Docker has a value higher than that.
 
 Building
 --------
