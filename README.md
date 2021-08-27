@@ -120,3 +120,7 @@ First run `docker ps` to get the container ID. Then run:
 
 Or as root:
 `docker exec -u 0 -it <container id> /bin/bash`
+
+Other questions?
+----------------
+Check out the [FAQ](https://github.com/oracle/docker-images/blob/main/OracleDatabase/SingleInstance/FAQ.md)
