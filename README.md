@@ -1,13 +1,16 @@
 # oracle21c-docker
 A docker container for running Oracle 21c
 
+Background
+----------
+
 A while back, Oracle introduced the concept of container databases (CDB) and pluggable databases (PDB). Containers are used for multi-tenancy and contain pluggable databases. Pluggable databases are what you are probably used to, a self contained database that you connect to. By default, this image creates one CDB, and one PDB within that CDB.
 
 Note that Oracle is shifting away from an SID and using service names instead. PDB use service names, CDB use SIDs. However, usernames for CDB must start with C##, ie C##STEVE. So to make things simple, we are focusing on just using the single PDB.
 
-I used to maintain a standalone repository for building these docker images, like my Oracle 12c one here: https://github.com/steveswinsburg/oracle12c-docker
+I used to maintain a standalone repository for building these docker images, like my Oracle 12cR2 one here: https://github.com/steveswinsburg/oracle12c-docker
 
-Oracle have since improved their docker images so all we need now are simplified instructions based on the official Oracle docker-images repo.
+Through Oracle community contributions (some mine), the Official docker images are now in good shape, so all we need are simplified instructions.
 
 Before you begin
 ----------------
