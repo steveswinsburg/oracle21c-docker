@@ -62,9 +62,9 @@ docker run \
 -e ORACLE_PWD=password \
 -e INIT_SGA_SIZE=3000 \
 -e INIT_PGA_SIZE=1000 \
--v /Users/<your-username>/path/to/store/db/files/:/opt/oracle/oradata \
+-v /path/to/store/db/files/:/opt/oracle/oradata \
 -d \
-oracle/database:121.3.0-ee
+oracle/database:21.3.0-ee
 ```
 
 Configuration
@@ -84,10 +84,10 @@ Configuration
                   The data volume to use for the database.
                   Has to be writable by the Unix "oracle" (uid: 54321) user inside the container!
                   If omitted the database will not be persisted over container recreation.
-   -v /Users/<your-username>/path/to/store/db/files/:/opt/oracle/oradata
+   -v /path/to/store/db/files/:/opt/oracle/oradata
                   Mount the data volume into one of your local folders.
                   If omitted you might run into a "No disk space" issue at some point as your database keeps growing and docker does not resize its volume.
-   -d:            Run in detached mode. You want this otherwise `Ctrl-C` will kill the container.
+   -d:            Run in detached mode. You definitely want this, otherwise `Ctrl-C` will kill the container.
 ```
 
 Connecting to Oracle
@@ -99,9 +99,9 @@ For example, SQL Developer:
 ```
 Hostname: localhost
 Port: 1521
-Service Name: <your service name>
+Service Name: orcl
 Username: sys
-Password: <your password>
+Password: password
 Role: AS SYSDBA
 
 ```
